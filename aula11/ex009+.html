@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Sistema de imigração</h1>
+    País de origem: <input type="text" name ="txtpais" id ="txtpais">
+    <input type="button" value="Verificar" onclick="resultado()">
+    <div id='res'></div>
+    <script>
+        function resultado() {
+            var txtp = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var pais = txtp.value
+            res.innerHTML = `<p>Seu País é: ${pais}</p>`
+            if (pais.toLowerCase() === 'brasil') {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO<strong></p>`
+            }else{
+                res.innerHTML += `<p>Você é <strong>ESTRENGEIRO<strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
